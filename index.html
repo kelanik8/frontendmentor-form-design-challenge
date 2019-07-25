@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -21,91 +23,180 @@
       padding: 0;
       font-family: 'Poppins', sans-serif;
     }
+
     .container {
       width: 100%;
       height: 100%;
     }
+
     .page-row {
       display: flex;
       flex-direction: row;
     }
+
     .left {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       align-content: flex-end;
-      width: 60%;
+      width: 50%;
       height: 100vh;
       color: #FFF;
     }
+
     .left div {
-      width: 50%;
+      width: 80%;
     }
+
     .left h1 {
       font-weight: 900;
       font-size: 3em;
       line-height: 1em;
     }
+
     .left h6 {
       font-weight: 600;
       font-size: 0.9em;
       line-height: 1.3em;
     }
+
     .right {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       align-content: flex-end;
-      width: 40%;
+      width: 50%;
       height: 100vh;
       color: #FFF;
+      padding: 0 30px 0 30px;
     }
+
     .right .form-noty {
+      width: 80%;
       background: hsl(248, 32%, 49%);
+      border-radius: 8px;
+      text-align: center;
+      -webkit-box-shadow: 0px 5px 9px 2px rgba(0, 0, 0, 0.26);
+      box-shadow: 0px 5px 9px 2px rgba(0, 0, 0, 0.26);
     }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .right .form-content {
+      width: 80%;
+      background: #FFF;
+      border-radius: 8px;
+      text-align: center;
+      -webkit-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.26);
+      box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.26);
+      height: auto;
+      padding: 30px 0 30px 0;
+    }
+    .right .form-content input {
+      border: none;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      color: hsl(249, 10%, 26%);
+      height: 55px;
+      width: 80%;
+      margin: 10px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding-left: 10px;
+      transition: all 0.4s;
+    }
+    .right .form-content input:focus {
+      border-color: hsl(248, 32%, 49%);
+    }
+    .right .form-content button {
+      border: none;
+      background: #37CC8A;
+      width: 80%;
+      padding: 20px 0 20px 0;
+      border-radius: 8px;
+      text-transform: uppercase;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 1em;
+      -webkit-box-shadow: 0px 4px 0px 0px rgb(20, 148, 90);
+      box-shadow: 0px 4px 0px 0px rgb(20, 148, 90);
+    }
+    .terms-group {
+      margin-top: 10px;
+      font-size: 12px;
+      color: rgb(194, 195, 195);
+    }
+    .terms-group span {
+      color: hsl(0, 100%, 74%);
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <div class="page-row">
       <div class="left">
         <div>
-          <h1> 
+          <h1>
             Learn to code by watching others
           </h1>
           <h6>
-            See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-            but understanding how developers think is invaluable. 
+            See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+            but understanding how developers think is invaluable.
           </h6>
         </div>
       </div>
       <div class="right">
         <div class="form-noty">
-            <p>Try it free 7 days then $20/mo. thereafter</p>
+          <p>Try it free 7 days then $20/mo. thereafter</p>
+        </div><br>
+        <div class="form-content">
+          <div class="form-group">
+            <input type="text" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Password">
+          </div><br>
+          <div class="form-group">
+            <button>
+                Claim your free trial
+            </button>
+          </div>
+          <div class="terms-group">
+            <p>
+                By clicking the button, you are agreeing to our <span>Terms and Services</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
 
-  Claim your free trial 
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>
+
 </html>
