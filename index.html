@@ -138,6 +138,12 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+    .error {
+      display: none;
+      color: red;
+      padding-right: 45px;
+      float: right;
+    }
   </style>
 </head>
 
@@ -162,19 +168,23 @@
         </div><br>
         <div class="form-content">
           <div class="form-group">
-            <input type="text" placeholder="First Name">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <span class="error firstName">First Name is required</span>
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Last Name">
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <span class="error lastName">Last Name is required</span>
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Email Address">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <span class="error email">Email is required</span>
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Password">
+            <input type="text" id="password" placeholder="Password" required>
+            <span class="error password">Password is required</span>
           </div><br>
           <div class="form-group">
-            <button>
+            <button onclick="validateForm()">
                 Claim your free trial
             </button>
           </div>
@@ -197,6 +207,43 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <script>
+    var firstName = document.querySelector('#firstName');
+    var lastName = document.querySelector('#lastName');
+    var email = document.querySelector('#email');
+    var password = document.querySelector('#password');
+    var error = document.querySelectorAll('.error');
+
+  function validateForm() {
+    
+    if (!firstName.checkValidity()) {
+      document.querySelector('.error.firstName').style.display = 'inline-block';
+    } else  {
+      document.querySelector('.error.firstName').style.display = 'none';
+    }
+
+    if (!lastName.checkValidity()) {
+      document.querySelector('.error.lastName').style.display = 'inline-block';
+    } else  {
+      document.querySelector('.error.lastName').style.display = 'none';
+    }
+
+    if (!email.checkValidity()) {
+      document.querySelector('.error.email').style.display = 'inline-block';
+      document.querySelector('.error.email').innerHTML = email.validationMessage;
+    } else  {
+      document.querySelector('.error.email').style.display = 'none';
+    }
+
+    if (!password.checkValidity()) {
+      document.querySelector('.error.password').style.display = 'inline-block';
+    } else  {
+      document.querySelector('.error.password').style.display = 'none';
+    }
+
+  }
+</script>
 </body>
 
 </html>
