@@ -189,3 +189,12 @@
     grid-area: 4;
   }
 }
+
+.calc-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+calc-layout div {
+ height: 100%;
+}
