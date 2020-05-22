@@ -205,6 +205,6 @@
     display: none;
 }
 
-.calc-layout div:nth-of-type(-n+2) {
+.calc-layout div:nth-of-type(-n+5) {
     display: block;
 }
