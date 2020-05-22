@@ -200,3 +200,11 @@
   flex: 1 !important;
   height: 100% !important;
 }
+
+.calc-layout div {
+    display: none;
+}
+
+.calc-layout div:nth-of-type(-n+2) {
+    display: block;
+}
