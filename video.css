@@ -196,5 +196,7 @@
 }
 
 .calc-layout div {
- height: 100%;
+  flex-basis: 30% !important;
+  flex: 1 !important;
+  height: 100% !important;
 }
