@@ -208,3 +208,6 @@
 .calc-layout div:nth-of-type(-n+5) {
     display: block;
 }
+#root > div:nth-child(2) > p {
+  display: none;
+}
